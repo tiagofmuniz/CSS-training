@@ -1,0 +1,231 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+div#container {
+    display: grid;
+    grid-template-columns: 100vh;
+    grid-template-rows: 100vh;
+    border: 3px solid black;
+    justify-items: center;
+    align-items: center;
+    background-color: grey;
+    justify-content: center;   
+    position: relative; 
+    background-color: black;
+}
+div#nucleo {
+    display: grid;
+    grid-template-columns: 50px;
+    grid-template-rows:  50px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;  
+    z-index: 1;
+}
+
+.p {
+    width: 50px;
+    height:50px;
+    background-color: green;
+    border-radius:50%;
+    box-shadow: 0px 0px 20px yellow;
+
+}
+.p1 {
+    position: absolute;
+    animation: spin1 .004 linear infinite alternate;
+    z-index: 10;
+}
+
+
+.p2 {
+    position: absolute;
+    animation: spin2 1 linear infinite alternate;
+    z-index: 11;
+}
+
+
+.p3 {
+    position: absolute;
+    animation: spin1 2 linear infinite alternate;
+    z-index: 12;
+        }
+
+.p4 {
+    position: absolute;
+    animation: spin2 2 linear infinite alternate;
+    z-index: 13;
+    }
+
+.p5 {
+    position: absolute;
+    animation: spin1 2 linear infinite alternate;
+    z-index: 14;
+    }
+.p6 {
+    position: absolute;
+    animation: spin2 .015s linear infinite alternate;
+    z-index: 20;
+    }
+.p7 {
+    position: absolute;
+    z-index: 16;
+    animation: spin1 .006s linear infinite alternate;
+    }
+.p8 {
+    position: absolute;
+    animation: spin1 .007 linear infinite alternate;
+    z-index: 17;
+    }
+.p9 {
+    position: absolute;
+    z-index: 18;
+    animation: spin2 .008s linear infinite alternate;
+    }
+@keyframes spin1 {
+    10% {transform:translateX(50%);backgound-color: rgb(255, 0, 0);}
+    20% {transform:translate(25%, 50%);}
+    30% {transform:translate(-50%, -0%);backgound-color: rgb(255,127, 0);}
+    40% {transform:translate(25%, -50%);}
+    50% {transform:translate(37%, 50%); backgound-color: rgb(255, 255, 0);;}
+    70% {transform:translate(-25%, -50%);backgound-color: rgb(0, 0, 255);}
+    90% {transform:translateX(50%);backgound-color: rgb(75, 0, 130);}
+    100% {transform:translate(25%, -50%);backgound-color: rgb(143, 0, 255);}
+}
+
+@keyframes spin2 {
+    10% {transform:translateX(40%);backgound-color: rgb(255, 255, 0);}
+    20% {transform:translate(15%, 40%);}
+    30% {transform:translate(-40%, -10%);backgound-color: rgb(255,127, 0);}
+    40% {transform:translate(15%, -40%);backgound-color: rgb(255, 0, 0);}
+    50% {transform:translate(28%, 40%); backgound-color: rgb(75, 0, 130);}
+    70% {transform:translate(-15%, -39%);backgound-color: rgb(143, 0, 255);}
+    90% {transform:translateX(45%);}
+    100% {transform:translate(19%, -46%);
+    }
+}
+
+
+.orbita {
+    border: 1px solid yellow;
+    position: absolute;
+    border-radius: 50%;
+}
+.eletron {
+    width: 20px;
+    height:20px;
+    background:linear-gradient(76deg, blue, black); 
+    border-radius: 50%;
+    margin-top:50%;
+    margin-left: -10px;
+    box-shadow: 0px 0px 20px red;
+  
+}
+
+div#orbita1 {
+    width: 25vh;
+    height: 25vh;
+    z-index: 1;
+    animation: giro1 1s linear infinite;
+  }
+  @keyframes giro1 {    
+      to {transform: rotate3d(0, .5, 1, 360deg);
+  }}
+
+div#orbita2 {
+    width: 40vh;
+    height: 40vh;
+    z-index: 3;
+    animation: giro2 2s linear infinite;
+}
+@keyframes giro2 {    
+     to {transform: rotate3d(.8, 0, 1, 360deg);
+}}
+div#orbita3 {
+    width: 55vh;
+    height: 55vh;
+    z-index: 4;
+    animation: giro3 2s linear infinite;
+}
+@keyframes giro3 {    
+    to {transform: rotate3d(1, 1, 1, 360deg);
+}}
+div#orbita4 {
+    width: 70vh;
+    height: 70vh;
+    z-index: 5;
+    animation: giro4 2s linear infinite;
+}
+@keyframes giro4 {    
+    to {transform: rotate3d(.3, .7, 1, 360deg);
+}}
+div#orbita5 {
+    width: 85vh;
+    height: 85vh;
+    z-index: 6;
+    animation: giro5 2s linear infinite;
+}
+@keyframes giro5 {    
+    to {transform: rotate3d(1, 0, 1, 360deg);
+}}
+div#orbita6 {
+    width: 100vh;
+    height: 100vh;
+    z-index: 7;
+    animation: giro6 2s linear infinite;
+}
+@keyframes giro6 {    
+    to {transform: rotate3d(.1, .4, 1, 360deg);
+}}
+
+
+/*@keyframes orbita {
+    to { transform: rotate(360deg);
+}
+transform: rotate3d(0, 1, 0, 360deg);
+
